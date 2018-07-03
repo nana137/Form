@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单内容</title>
+    <style>
+        .wrong{
+            background:#fff;
+            font-weight:bold;
+            border:1px solid red;
+        }
+        .right{
+            background:#fff;
+            font-weight:bold;
+            border:1px solid forestgreen;
+        }
+        .smallMsg{
+            font-size:12px;
+        }
+    </style>
+    <script src="formValidate.js"></script>
+</head>
+<body>
+<form action="yanzheng.html" method="post">
+    请输入你的邮箱：<input type="text" id="email" name="email" value="">
+    <span id="emailMsg" class="smallMsg"></span><br>
+    <button type="submit">显示邮箱地址</button>
+    <br>
+    请输入你的密码：<input type="password" name="pwd" id="pwd" value="">
+    <span id="pwdMsg" class="smallMsg"></span><br>
+    确认密码：<input type="password" name="conf" id="conf" value="">
+    <span id="confMsg" class="smallMsg"></span><br>
+    <!--单选钮-->
+    请选择你最喜欢的运动：
+    <input type="radio" name="sport" id="sport1" value="网球">网球&nbsp;
+    <input type="radio" name="sport" id="sport2" value="羽毛球">羽毛球&nbsp;
+    <input type="radio" name="sport" id="sport3" value="足球">足球<br>
+    <button type="submit" name="sportButton" id="sport">显示所选运动</button>
+    <br>
+
+    <!--复选框-->
+    请选择你的课程：
+    <input type="checkbox" value="语文" name="course">语文&nbsp;
+    <input type="checkbox" value="数学" name="course">数学&nbsp;
+    <input type="checkbox" value="英语" name="course">英语&nbsp;
+    <input type="checkbox" value="物理" name="course">物理<br>
+    <input type="checkbox" value="全选" name="courseAll" id="courseAll"> 全选
+    <button type="submit" name="manyCheck" id="course">显示所选课程</button>
+    <br>
+    <!--下拉列表框-->
+    你的家乡：<select name="city" id="city">
+    <option value="北京">北京</option>
+    <option value="上海">上海</option>
+    <option value="沈阳">沈阳</option>
+</select><br>
+
+    <!--文本域-->
+    描述：<textarea id="note" name="note" cols="50" rows="10">hello!</textarea><br>
+    <span id="noteMsg" class="smallMsg"></span><br>
+    <button type="submit" name="textArea" id="textArea">保存</button>
+    <br>
+    <!--确认框-->
+    <a href="xxx" onclick="return deleteConfirm()">删除邮件</a><br>
+    <!--用户输入框-->
+    <a href="888" onclick="return usePrompt()">提示</a>
+
+    <!--重定向-->
+    <select id="url" name="url" onchange="go(this.value)">
+        <option >===请选择要显示的页面===</option>
+        <option value="yanzheng.html">SHOW</option>
+        <option value="http://www.baidu.com">BAIDU</option>
+    </select>
+</form>
+</body>
+</html>

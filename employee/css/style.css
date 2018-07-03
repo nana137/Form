@@ -1,0 +1,12 @@
+.init{
+    font-weight:bold;
+}
+.right{
+    border:1px solid green;
+}
+.wrong{
+    border:1px solid red;
+}
+#submit,#reset{
+    margin:20px 100px;
+}
